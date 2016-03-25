@@ -3,3 +3,7 @@ openapi-codegen:
   volumes:
     - ${PWD}/specs:/specs
     - ${PWD}/src:/src
+  environment:
+    SPECS_FILE: ${SPECS_FILE}
+    SRC_LANG: ${SRC_LANG}
+    SRC_DIR: ${SRC_DIR}

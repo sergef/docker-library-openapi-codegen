@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
 
   # Notify Forwarder https://github.com/mhallin/vagrant-notify-forwarder
   # vagrant plugin install vagrant-notify-forwarder
-  config.notify_forwarder.enable = false
+  config.notify_forwarder.enable = true
   config.notify_forwarder.port = 22022
 
   (1..VAGRANT_VM_QTY).each do |vm_id|

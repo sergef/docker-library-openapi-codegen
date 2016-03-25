@@ -3,6 +3,10 @@ HOST_KEY=$(HOME)/.vagrant.d/insecure_private_key
 HOST_USER=vagrant
 HOST_NAME=openapi-codegen-sample-1
 
+SRC_DIR=/src
+SRC_LANG=nodejs
+SPECS_FILE=/specs/openapi.yaml
+
 up:
 	# vagrant plugin install vagrant-notify-forwarder
 	# vagrant plugin install vagrant-hostmanager
@@ -21,6 +25,9 @@ down:
 	vagrant destroy -f
 
 start:
+	SPECS_FILE=$(SPECS_FILE) \
+	SRC_DIR=$(SRC_DIR) \
+	SRC_LANG=$(SRC_LANG) \
 	docker-compose -f openapi-codegen.yaml up
 
 stop:
