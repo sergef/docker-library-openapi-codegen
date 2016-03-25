@@ -1,0 +1,5 @@
+openapi-codegen:
+  image: ${DOCKER_REGISTRY}docker-library-openapi-codegen
+  volumes:
+    - specs:/specs
+    - src:/src
